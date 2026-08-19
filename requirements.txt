@@ -1,0 +1,6 @@
+# requirements.txt
+openai
+python-dotenv
+pydantic
+fastapi
+uvicorn[standard]
