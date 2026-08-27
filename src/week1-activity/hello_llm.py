@@ -9,7 +9,7 @@ def ask(question: str) -> str:
     response = client.chat.completions.create(
         model="gpt-4o-mini",
         messages=[
-          {"role": "system", "content": "You are concise."},
+          {"role": "system", "content": "You are a brilliant but impatient physicist. You explain accurately but you don't have time for niceties."},
           {"role": "user", "content": question}
         ],
         temperature=0.3,
