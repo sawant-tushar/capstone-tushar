@@ -175,64 +175,64 @@ def summarise_run(
 # ─────────────────────────────────────────────────────────────────────────────
 # Entrypoint
 # ─────────────────────────────────────────────────────────────────────────────
-if __name__ == "__main__":
-    import sys
-    start_time = time.time()
-    fail_rate = float(sys.argv[1]) if len(sys.argv) > 1 else 0.0
-    sample = [Question(text=t) for t in [
-        "What is RAG in one sentence?",
-        "Name three uses of vector databases.",
-        "Why might an LLM hallucinate?",
-        "Explain async and await in plain language.",
-        "What is the difference between a chatbot and an agent?",
-    ]]
-    print(f"\nrun_batch_stream - fail_rate={fail_rate}")
-    answers = asyncio.run(run_batch_stream(sample, fail_rate=fail_rate))
-    print(f"\nreturned {len(answers)} answers")
-    elapsed = time.time() - start_time
-    print(f"elapsed time: {elapsed:.2f}sec")
-
 # if __name__ == "__main__":
-    # settings = Settings()
-    # log.info(f"config: {settings.model_dump(mode='json')}")
+#     import sys
+#     start_time = time.time()
+#     fail_rate = float(sys.argv[1]) if len(sys.argv) > 1 else 0.0
+#     sample = [Question(text=t) for t in [
+#         "What is RAG in one sentence?",
+#         "Name three uses of vector databases.",
+#         "Why might an LLM hallucinate?",
+#         "Explain async and await in plain language.",
+#         "What is the difference between a chatbot and an agent?",
+#     ]]
+#     print(f"\nrun_batch_stream - fail_rate={fail_rate}")
+#     answers = asyncio.run(run_batch_stream(sample, fail_rate=fail_rate))
+#     print(f"\nreturned {len(answers)} answers")
+#     elapsed = time.time() - start_time
+#     print(f"elapsed time: {elapsed:.2f}sec")
 
-    # questions = load_questions(settings.questions_csv)
-    # log.info(f"loaded {len(questions)} questions")
+if __name__ == "__main__":
+    settings = Settings()
+    log.info(f"config: {settings.model_dump(mode='json')}")
 
-    # started = time.time()
-    # answers = asyncio.run(
-    #     run_in_batches(
-    #         questions,
-    #         batch_size=settings.batch_size,
-    #         fail_rate=settings.fail_rate,
-    #     )
-    # )
-    # elapsed = time.time() - started
+    questions = load_questions(settings.questions_csv)
+    log.info(f"loaded {len(questions)} questions")
 
-    # summary = summarise_run(
-    #     answers,
-    #     started_at = started,
-    #     elapsed    = elapsed,
-    #     fail_rate  = settings.fail_rate,
-    #     use_fake   = settings.use_fake,
-    # )
-    # log.info(f"summary: {summary.model_dump_json()}")
+    started = time.time()
+    answers = asyncio.run(
+        run_in_batches(
+            questions,
+            batch_size=settings.batch_size,
+            fail_rate=settings.fail_rate,
+        )
+    )
+    elapsed = time.time() - started
 
-    # # Write the structured artefact
-    # settings.results_json.write_text(
-    #     json.dumps({
-    #         "summary": summary.model_dump(mode="json"),
-    #         "answers": [a.model_dump() for a in answers],
-    #     }, indent=2),
-    #     encoding="utf-8",
-    # )
-    # print(f"wrote {len(answers)} answers to {settings.results_json} in {elapsed:.2f}s")
+    summary = summarise_run(
+        answers,
+        started_at = started,
+        elapsed    = elapsed,
+        fail_rate  = settings.fail_rate,
+        use_fake   = settings.use_fake,
+    )
+    log.info(f"summary: {summary.model_dump_json()}")
 
-    # # SQLite persistence
-    # # Deferred import: store.py imports Answer from this module; top-level import
-    # # would cause a circular import.
-    # from .store import connect, write_run, write_answers
-    # with connect(settings.results_db) as con:
-    #     run_id = write_run(con, summary)
-    #     n      = write_answers(con, run_id, answers)
-    # log.info(f"persisted run {run_id} with {n} answers to {settings.results_db}")
+    # Write the structured artefact
+    settings.results_json.write_text(
+        json.dumps({
+            "summary": summary.model_dump(mode="json"),
+            "answers": [a.model_dump() for a in answers],
+        }, indent=2),
+        encoding="utf-8",
+    )
+    print(f"wrote {len(answers)} answers to {settings.results_json} in {elapsed:.2f}s")
+
+    # SQLite persistence
+    # Deferred import: store.py imports Answer from this module; top-level import
+    # would cause a circular import.
+    from .store import connect, write_run, write_answers
+    with connect(settings.results_db) as con:
+        run_id = write_run(con, summary)
+        n      = write_answers(con, run_id, answers)
+    log.info(f"persisted run {run_id} with {n} answers to {settings.results_db}")
