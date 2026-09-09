@@ -1,0 +1,50 @@
+{"ts": 1788272351.216, "level": "INFO", "msg": "asked: What is RAG in one sentence?", "logger": "pipeline"}
+{"ts": 1788272351.64, "level": "INFO", "msg": "asked: Why might an LLM hallucinate?", "logger": "pipeline"}
+{"ts": 1788272351.809, "level": "INFO", "msg": "asked: Explain async and await in plain languag", "logger": "pipeline"}
+{"ts": 1788272352.091, "level": "INFO", "msg": "asked: What is the difference between a chatbot", "logger": "pipeline"}
+{"ts": 1788272352.241, "level": "INFO", "msg": "asked: Name three uses of vector databases.", "logger": "pipeline"}
+{"ts": 1788272523.654, "level": "WARNING", "msg": "retry 1 for: What is RAG in one sentence? (simulated transient failure for: What is RAG in one sentence?)", "logger": "pipeline"}
+{"ts": 1788272523.847, "level": "INFO", "msg": "asked: Name three uses of vector databases.", "logger": "pipeline"}
+{"ts": 1788272523.963, "level": "WARNING", "msg": "retry 1 for: Why might an LLM hallucinate? (simulated transient failure for: Why might an LLM hallucinate?)", "logger": "pipeline"}
+{"ts": 1788272523.979, "level": "WARNING", "msg": "retry 1 for: What is the difference between a chatbot (simulated transient failure for: What is the difference between a chatbot)", "logger": "pipeline"}
+{"ts": 1788272524.279, "level": "INFO", "msg": "asked: Explain async and await in plain languag", "logger": "pipeline"}
+{"ts": 1788272525.761, "level": "INFO", "msg": "asked: Why might an LLM hallucinate?", "logger": "pipeline"}
+{"ts": 1788272526.077, "level": "INFO", "msg": "asked: What is the difference between a chatbot", "logger": "pipeline"}
+{"ts": 1788272526.13, "level": "INFO", "msg": "asked: What is RAG in one sentence?", "logger": "pipeline"}
+{"ts": 1788274342.171, "level": "INFO", "msg": "asked: What is RAG in one sentence?", "logger": "pipeline"}
+{"ts": 1788274342.458, "level": "WARNING", "msg": "retry 1 for: What is the difference between a chatbot (simulated transient failure for: What is the difference between a chatbot)", "logger": "pipeline"}
+{"ts": 1788274342.681, "level": "INFO", "msg": "asked: Why might an LLM hallucinate?", "logger": "pipeline"}
+{"ts": 1788274343.004, "level": "INFO", "msg": "asked: Name three uses of vector databases.", "logger": "pipeline"}
+{"ts": 1788274343.005, "level": "INFO", "msg": "asked: Explain async and await in plain languag", "logger": "pipeline"}
+{"ts": 1788274344.827, "level": "WARNING", "msg": "retry 2 for: What is the difference between a chatbot (simulated transient failure for: What is the difference between a chatbot)", "logger": "pipeline"}
+{"ts": 1788274514.623, "level": "INFO", "msg": "asked: Why might an LLM hallucinate?", "logger": "pipeline"}
+{"ts": 1788274514.765, "level": "INFO", "msg": "asked: Explain async and await in plain languag", "logger": "pipeline"}
+{"ts": 1788274514.765, "level": "INFO", "msg": "asked: What is the difference between a chatbot", "logger": "pipeline"}
+{"ts": 1788274515.074, "level": "INFO", "msg": "asked: What is RAG in one sentence?", "logger": "pipeline"}
+{"ts": 1788274515.116, "level": "INFO", "msg": "asked: Name three uses of vector databases.", "logger": "pipeline"}
+{"ts": 1788274519.464, "level": "WARNING", "msg": "retry 1 for: What is the difference between a chatbot (simulated transient failure for: What is the difference between a chatbot)", "logger": "pipeline"}
+{"ts": 1788274519.606, "level": "WARNING", "msg": "retry 1 for: What is RAG in one sentence? (simulated transient failure for: What is RAG in one sentence?)", "logger": "pipeline"}
+{"ts": 1788274519.655, "level": "INFO", "msg": "asked: Explain async and await in plain languag", "logger": "pipeline"}
+{"ts": 1788274520.077, "level": "WARNING", "msg": "retry 1 for: Name three uses of vector databases. (simulated transient failure for: Name three uses of vector databases.)", "logger": "pipeline"}
+{"ts": 1788274520.398, "level": "WARNING", "msg": "retry 1 for: Why might an LLM hallucinate? (simulated transient failure for: Why might an LLM hallucinate?)", "logger": "pipeline"}
+{"ts": 1788274520.903, "level": "WARNING", "msg": "retry 2 for: What is the difference between a chatbot (simulated transient failure for: What is the difference between a chatbot)", "logger": "pipeline"}
+{"ts": 1788274521.523, "level": "WARNING", "msg": "retry 2 for: Name three uses of vector databases. (simulated transient failure for: Name three uses of vector databases.)", "logger": "pipeline"}
+{"ts": 1788274522.113, "level": "WARNING", "msg": "retry 2 for: What is RAG in one sentence? (simulated transient failure for: What is RAG in one sentence?)", "logger": "pipeline"}
+{"ts": 1788274522.708, "level": "WARNING", "msg": "retry 2 for: Why might an LLM hallucinate? (simulated transient failure for: Why might an LLM hallucinate?)", "logger": "pipeline"}
+{"ts": 1788274524.092, "level": "INFO", "msg": "asked: What is the difference between a chatbot", "logger": "pipeline"}
+{"ts": 1788274524.868, "level": "INFO", "msg": "asked: What is RAG in one sentence?", "logger": "pipeline"}
+{"ts": 1788274525.0, "level": "INFO", "msg": "asked: Name three uses of vector databases.", "logger": "pipeline"}
+{"ts": 1788274525.21, "level": "INFO", "msg": "asked: Why might an LLM hallucinate?", "logger": "pipeline"}
+{"ts": 1788274871.567, "level": "INFO", "msg": "asked: What is RAG in one sentence?", "logger": "pipeline"}
+{"ts": 1788274871.723, "level": "WARNING", "msg": "retry 1 for: Explain async and await in plain languag (simulated transient failure for: Explain async and await in plain languag)", "logger": "pipeline"}
+{"ts": 1788274872.04, "level": "WARNING", "msg": "retry 1 for: Name three uses of vector databases. (simulated transient failure for: Name three uses of vector databases.)", "logger": "pipeline"}
+{"ts": 1788274872.318, "level": "INFO", "msg": "asked: Why might an LLM hallucinate?", "logger": "pipeline"}
+{"ts": 1788274872.697, "level": "WARNING", "msg": "retry 1 for: What is the difference between a chatbot (simulated transient failure for: What is the difference between a chatbot)", "logger": "pipeline"}
+{"ts": 1788274873.646, "level": "INFO", "msg": "asked: Explain async and await in plain languag", "logger": "pipeline"}
+{"ts": 1788274873.662, "level": "INFO", "msg": "asked: Name three uses of vector databases.", "logger": "pipeline"}
+{"ts": 1788274874.114, "level": "INFO", "msg": "asked: What is the difference between a chatbot", "logger": "pipeline"}
+{"ts": 1788274879.46, "level": "INFO", "msg": "asked: Explain async and await in plain languag", "logger": "pipeline"}
+{"ts": 1788274880.137, "level": "INFO", "msg": "asked: What is the difference between a chatbot", "logger": "pipeline"}
+{"ts": 1788274880.276, "level": "INFO", "msg": "asked: What is RAG in one sentence?", "logger": "pipeline"}
+{"ts": 1788274880.465, "level": "INFO", "msg": "asked: Name three uses of vector databases.", "logger": "pipeline"}
+{"ts": 1788274880.465, "level": "INFO", "msg": "asked: Why might an LLM hallucinate?", "logger": "pipeline"}
